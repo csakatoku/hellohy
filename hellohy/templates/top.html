@@ -7,7 +7,7 @@
 <ul>
   {% for topic in topics %}
   <li>
-    <a href="{{ topic.url }}" rel="nofollow">{{ topic.title }}</a>
+    <a href="{{ topic.get_absolute_url }}">{{ topic.title }}</a>
   </li>
   {% endfor %}
 </ul>
