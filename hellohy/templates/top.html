@@ -4,4 +4,11 @@
 
 {% block content %}
 <h1>Hello, Hy!</h1>
+<ul>
+  {% for topic in topics %}
+  <li>
+    <a href="{{ topic.url }}" rel="nofollow">{{ topic.title }}</a>
+  </li>
+  {% endfor %}
+</ul>
 {% endblock %}

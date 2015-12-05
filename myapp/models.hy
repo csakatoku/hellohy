@@ -1,3 +1,7 @@
-(import [django.db [models]])
+(import [django.db [models]]
+        [django.utils.timezone :as timezone])
 
-; Register your models here.
+(defclass Topic [models.Model]
+  [title (models.TextField)
+   url (models.URLField)
+   created_at (models.DateTimeField :default timezone.now)])

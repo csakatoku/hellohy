@@ -1,4 +1,7 @@
-(import [django.shortcuts [render]])
+(import [django.shortcuts [render]]
+        [myapp.models [Topic]])
 
 (defn top [req]
-  (render req "top.html" {}))
+  (def topics (-> (Topic.objects.all)
+                  (.order_by "-id")))
+  (render req "top.html" {"topics" topics}))

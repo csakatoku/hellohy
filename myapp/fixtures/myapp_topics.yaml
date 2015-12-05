@@ -1,0 +1,17 @@
+- pk: 1
+  model: myapp.Topic
+  fields:
+    title: "Django 1.9 released"
+    url: "https://www.djangoproject.com/weblog/2015/dec/01/django-19-released/"
+
+- pk: 2
+  model: myapp.Topic
+  fields:
+    title: "Security releases issued: 1.9rc2, 1.8.7, 1.7.11"
+    url: "https://www.djangoproject.com/weblog/2015/nov/24/security-releases-issued/"
+
+- pk: 3
+  model: myapp.Topic
+  fields:
+    title: "Introducing the DSF's Director of Advancement"
+    url: "https://www.djangoproject.com/weblog/2015/nov/23/introducing-dsfs-director-advancement/"
