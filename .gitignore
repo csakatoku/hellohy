@@ -1,0 +1,15 @@
+*~
+*.pyc
+*.orig
+*.rej
+*.swp
+._*
+\#*
+.\#*
+local_settings.py
+build/
+wheelhouse/
+.DS_Store
+.idea
+nosetests.xml
+db.sqlite3
