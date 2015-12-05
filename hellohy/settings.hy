@@ -16,7 +16,9 @@
 ; Application definition
 
 (def INSTALLED_APPS
-  ["django.contrib.admin"
+  ["myapp"
+   "hellohy"
+   "django.contrib.admin"
    "django.contrib.auth"
    "django.contrib.contenttypes"
    "django.contrib.sessions"
