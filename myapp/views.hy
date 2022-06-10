@@ -1,10 +1,12 @@
+(require hyrule [->])
+
 (import django.shortcuts [render]
         django.http [Http404]
         myapp.models [Topic])
 
 (defn top [req]
   (setv topics (-> (Topic.objects.all)
-                  (.order_by "-id")))
+                   (.order_by "-id")))
   (render req "top.html" {"topics" topics}))
 
 (defn topic_detial [req topic_id]
