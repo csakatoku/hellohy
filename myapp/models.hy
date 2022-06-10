@@ -1,5 +1,5 @@
 (import django.db [models]
-        django.core.urlresolvers [reverse]
+        django.urls [reverse]
         django.utils.timezone :as timezone)
 
 (defclass Topic [models.Model]
