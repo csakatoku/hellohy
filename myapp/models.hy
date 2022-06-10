@@ -3,9 +3,9 @@
         django.utils.timezone :as timezone)
 
 (defclass Topic [models.Model]
-  [title (models.TextField)
-   url (models.URLField)
-   created_at (models.DateTimeField :default timezone.now)]
+  (setv title (models.TextField))
+  (setv url (models.URLField))
+  (setv created_at (models.DateTimeField :default timezone.now))
 
   (defn __str__ [self]
     self.title)

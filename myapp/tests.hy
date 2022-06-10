@@ -11,7 +11,7 @@
       (self.assertEqual (obj.get_absolute_url) "/1/"))))
 
 (defclass TopicDetailViewCase [TestCase]
-  [fixtures ["myapp_topics.yaml"]]
+  (setx fixtures ["myapp_topics.yaml"])
 
   (defn test_200 [self]
     (let [res (self.client.get "/1/")]
