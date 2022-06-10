@@ -1,0 +1,26 @@
+name: release-production
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  release-staging:
+    runs-on: ubuntu-latest
+    env:
+      GIT_PR_RELEASE_BRANCH_PRODUCTION: production
+      GIT_PR_RELEASE_BRANCH_STAGING: staging
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Ruby 3.1
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+      - name: Execute git-pr-release
+        env:
+          GIT_PR_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gem install git-pr-release -v "2.1.1"
+          git remote set-url origin "https://${GITHUB_ACTOR}:${GIT_PR_RELEASE_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git-pr-release || echo "Done."
