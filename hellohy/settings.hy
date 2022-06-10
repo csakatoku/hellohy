@@ -17,7 +17,7 @@
 ; SECURITY WARNING: don't run with debug turned on in production!
 (setv DEBUG (env "DEBUG"))
 
-(setv ALLOWED_HOSTS [])
+(setv ALLOWED_HOSTS [".herokuapp.com" "localhost"])
 
 ; Application definition
 
