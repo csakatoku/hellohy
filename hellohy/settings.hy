@@ -38,7 +38,8 @@
    "django.middleware.csrf.CsrfViewMiddleware"
    "django.contrib.auth.middleware.AuthenticationMiddleware"
    "django.contrib.messages.middleware.MessageMiddleware"
-   "django.middleware.clickjacking.XFrameOptionsMiddleware"])
+   "django.middleware.clickjacking.XFrameOptionsMiddleware"
+   "whitenoise.middleware.WhiteNoiseMiddleware"])
 
 (setv ROOT_URLCONF "hellohy.urls")
 
@@ -87,6 +88,7 @@
 ; Static files (CSS, JavaScript, Images)
 ; https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+(setv STATIC_ROOT (os.path.join BASE_DIR "staticfiles"))
 (setv STATIC_URL "/static/")
 
 ; Default primary key field type
