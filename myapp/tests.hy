@@ -4,7 +4,7 @@
 (defclass TopicTestCase [TestCase]
   (defn test_unicode [self]
     (let [obj (Topic :title "test")]
-      (self.assertEqual (unicode obj) "test")))
+      (self.assertEqual (str obj) "test")))
 
   (defn test_get_absolute_url [self]
     (let [obj (Topic :pk 1)]
