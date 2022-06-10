@@ -1,8 +1,15 @@
 (import os)
 
+(import environ)
+
+(setv env (environ.Env))
+
 ; Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 (setv BASE_DIR
   (os.path.dirname (os.path.dirname (os.path.abspath __file__))))
+
+; Take environment variables from .env file
+(environ.Env.read_env (os.path.join BASE_DIR ".env"))
 
 ; SECURITY WARNING: keep the secret key used in production secret!
 (setv SECRET_KEY
@@ -52,8 +59,7 @@
 ; https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 (setv DATABASES
-  {"default" {"ENGINE" "django.db.backends.sqlite3"
-              "NAME" (os.path.join BASE_DIR "db.sqlite3")}})
+  {"default" (env.db)})
 
 ; Password validation
 ; https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
