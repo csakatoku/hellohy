@@ -1,3 +1,7 @@
-(import [django.contrib [admin]])
+(import django.contrib [admin])
 
-; Register your models here.
+(import .models [Topic])
+
+(defclass TopicAdmin [admin.ModelAdmin])
+
+(admin.site.register Topic TopicAdmin)

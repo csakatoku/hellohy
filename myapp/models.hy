@@ -1,13 +1,13 @@
-(import [django.db [models]]
-        [django.core.urlresolvers [reverse]]
-        [django.utils.timezone :as timezone])
+(import django.db [models]
+        django.urls [reverse]
+        django.utils.timezone :as timezone)
 
 (defclass Topic [models.Model]
-  [title (models.TextField)
-   url (models.URLField)
-   created_at (models.DateTimeField :default timezone.now)]
+  (setv title (models.TextField))
+  (setv url (models.URLField))
+  (setv created_at (models.DateTimeField :default timezone.now))
 
-  (defn --unicode-- [self]
+  (defn __str__ [self]
     self.title)
 
   (defn get_absolute_url [self]
