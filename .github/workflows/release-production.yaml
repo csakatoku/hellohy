@@ -6,7 +6,7 @@ on:
       - staging
 
 jobs:
-  release-staging:
+  release-production:
     runs-on: ubuntu-latest
     env:
       GIT_PR_RELEASE_BRANCH_PRODUCTION: production
