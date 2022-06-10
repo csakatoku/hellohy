@@ -7,7 +7,7 @@
    url (models.URLField)
    created_at (models.DateTimeField :default timezone.now)]
 
-  (defn --unicode-- [self]
+  (defn __str__ [self]
     self.title)
 
   (defn get_absolute_url [self]
