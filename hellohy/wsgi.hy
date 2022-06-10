@@ -10,4 +10,4 @@
 
 (os.environ.setdefault "DJANGO_SETTINGS_MODULE" "hellohy.settings")
 
-(def application (get_wsgi_application))
+(setv application (get_wsgi_application))

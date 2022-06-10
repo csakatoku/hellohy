@@ -3,6 +3,6 @@
 (import [django.conf.urls [url include]]
         [django.contrib [admin]])
 
-(def urlpatterns
+(setv urlpatterns
   [(url r"^admin/" admin.site.urls)
    (url r"" (include "myapp.urls"))])
