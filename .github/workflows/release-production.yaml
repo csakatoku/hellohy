@@ -6,7 +6,7 @@ on:
       - staging
 
 jobs:
-  release-staging:
+  release-production:
     runs-on: ubuntu-latest
     env:
       GIT_PR_RELEASE_BRANCH_PRODUCTION: production
@@ -20,6 +20,7 @@ jobs:
       - name: Execute git-pr-release
         env:
           GIT_PR_RELEASE_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GIT_PR_RELEASE_TEMPLATE: ".github/pr-release-template.erb"
         run: |
           gem install git-pr-release -v "2.1.1"
           git remote set-url origin "https://${GITHUB_ACTOR}:${GIT_PR_RELEASE_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
