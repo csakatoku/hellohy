@@ -1,6 +1,6 @@
-(import django.conf.urls [url]
+(import django.urls [re_path]
         myapp [views])
 
 (setv urlpatterns
-  [(url r"^(?P<topic_id>\d+)/$" views.topic_detial :name "topic_detail")
-   (url r"" views.top)])
+  [(re_path r"^(?P<topic_id>\d+)/$" views.topic_detial :name "topic_detail")
+   (re_path r"^$" views.top)])

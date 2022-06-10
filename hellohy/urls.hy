@@ -1,8 +1,8 @@
 ; hellohy URL Configuration
 ;
-(import django.conf.urls [url include]
+(import django.urls [re_path include]
         django.contrib [admin])
 
 (setv urlpatterns
-  [(url r"^admin/" admin.site.urls)
-   (url r"" (include "myapp.urls"))])
+  [(re_path r"^admin/" admin.site.urls)
+   (re_path r"" (include "myapp.urls"))])
