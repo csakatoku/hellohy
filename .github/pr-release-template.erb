@@ -1,4 +1,4 @@
 <%= ENV['GIT_PR_RELEASE_BRANCH_PRODUCTION'].capitalize %> Release <%= Time.now %>
 <% pull_requests.each do |pr| -%>
-<%= pr.to_checklist_item %>
+<% unless pr.title.match?(/^(?:Staging|Production) Release \d{4}-\d{2}-\d{2}/) %><%= pr.to_checklist_item %><% end %>
 <% end -%>
