@@ -2,7 +2,7 @@
 
 (import environ)
 
-(setv env (environ.Env))
+(setv env (environ.Env :DEBUG [bool False]))
 
 ; Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 (setv BASE_DIR
@@ -12,11 +12,10 @@
 (environ.Env.read_env (os.path.join BASE_DIR ".env"))
 
 ; SECURITY WARNING: keep the secret key used in production secret!
-(setv SECRET_KEY
-  "-kr8j=u#o(vjq6v29f0ys6hi&2zx85dcbc&1qmao!lo3ob3mq@")
+(setv SECRET_KEY (env "SECRET_KEY"))
 
 ; SECURITY WARNING: don't run with debug turned on in production!
-(setv DEBUG True)
+(setv DEBUG (env "DEBUG"))
 
 (setv ALLOWED_HOSTS [])
 
