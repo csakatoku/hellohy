@@ -1,5 +1,5 @@
-(import [django.test [TestCase]]
-        [myapp.models [Topic]])
+(import django.test [TestCase]
+        myapp.models [Topic])
 
 (defclass TopicTestCase [TestCase]
   (defn test_unicode [self]

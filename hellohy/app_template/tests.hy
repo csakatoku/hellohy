@@ -1,3 +1,3 @@
-(import [django.test [TestCase]])
+(import django.test [TestCase])
 
 ; Create your tests here.

@@ -1,6 +1,6 @@
-(import [django.shortcuts [render]]
-        [django.http [Http404]]
-        [myapp.models [Topic]])
+(import django.shortcuts [render]
+        django.http [Http404]
+        myapp.models [Topic])
 
 (defn top [req]
   (setv topics (-> (Topic.objects.all)

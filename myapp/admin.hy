@@ -1,3 +1,3 @@
-(import [django.contrib [admin]])
+(import django.contrib [admin])
 
 ; Register your models here.

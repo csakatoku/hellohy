@@ -1,6 +1,6 @@
-(import [django.db [models]]
-        [django.core.urlresolvers [reverse]]
-        [django.utils.timezone :as timezone])
+(import django.db [models]
+        django.core.urlresolvers [reverse]
+        django.utils.timezone :as timezone)
 
 (defclass Topic [models.Model]
   [title (models.TextField)

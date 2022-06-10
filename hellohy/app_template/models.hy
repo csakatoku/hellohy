@@ -1,3 +1,3 @@
-(import [django.db [models]])
+(import django.db [models])
 
 ; Register your models here.
