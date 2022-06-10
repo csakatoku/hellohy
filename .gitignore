@@ -13,3 +13,5 @@ wheelhouse/
 .idea
 nosetests.xml
 db.sqlite3
+.env
+staticfiles/
