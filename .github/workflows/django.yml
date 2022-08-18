@@ -27,6 +27,7 @@ jobs:
         pip install -r requirements.txt
     - name: Run Tests
       env:
+        DATABASE_URL: "sqlite:///db.sqlite3"
         SECRET_KEY: ${{ secrets.SECRET_KEY }}
       run: |
         python manage.py test
