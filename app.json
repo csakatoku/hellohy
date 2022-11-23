@@ -1,7 +1,5 @@
 {
-  "addons": [
-    "heroku-postgresql"
-  ],
+  "addons": ["heroku-postgresql:mini"],
   "buildpacks": [
     {
       "url": "heroku/python"
@@ -21,7 +19,6 @@
     }
   },
   "name": "hellohy",
-  "scripts": {
-  },
+  "scripts": {},
   "stack": "heroku-22"
 }
