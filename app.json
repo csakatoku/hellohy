@@ -1,5 +1,5 @@
 {
-  "addons": ["heroku-postgresql:mini"],
+  "addons": ["heroku-postgresql:hobby-basic"],
   "buildpacks": [
     {
       "url": "heroku/python"
